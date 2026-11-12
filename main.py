@@ -5,6 +5,8 @@ products = [
     {"name": "Клавиатура", "price": 7000, "stock": 8},
 ]
 
+Product = dict[str, str | int]
+
 
 def show_products(products):
     for product in products:
@@ -15,7 +17,7 @@ def show_products(products):
     )
 
 
-def search_products(products: list[dict], query: str) -> list[dict]:
+def search_products(products: list[Product], query: str) -> list[Product]:
     return [
         product
         for product in products
@@ -23,4 +25,5 @@ def search_products(products: list[dict], query: str) -> list[dict]:
     ]
 
 
-show_products(products)
+if __name__ == "__main__":
+    show_products(products)
