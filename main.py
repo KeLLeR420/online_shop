@@ -15,12 +15,12 @@ def show_products(products):
     )
 
 
-show_products(products)
-
-
-def search_products(products, query):
+def search_products(products: list[dict], query: str) -> list[dict]:
     return [
         product
         for product in products
         if query.lower() in product["name"].lower()
     ]
+
+
+show_products(products)
