@@ -16,3 +16,11 @@ def show_products(products):
 
 
 show_products(products)
+
+
+def search_products(products, query):
+    return [
+        product
+        for product in products
+        if query.lower() in product["name"].lower()
+    ]
